@@ -86,3 +86,31 @@ body, html {
     margin-top: -16px;
 
 }
+
+.qrcode {
+    position: fixed;
+    bottom: 20px;
+    right: 4px;
+    width: 16%;
+}
+
+.sidebar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 16%;
+}
+
+.sidebar p {
+    color: #fff;
+    font-family: "VCR OSD Mono", sans-serif;
+    font-size: 38px;
+    text-align: center;
+}
+
+.sidebar h1 {
+    color: #fff;
+    font-family: "VCR OSD Mono", sans-serif;
+    font-size: 68px;
+    text-align: center;
+}

@@ -11,7 +11,12 @@
     <div id="messages" class="messages">
         <div class="msg"><p><span>-</span><br />Post een bericht door de QR-code te scannen!</p></div>
     </div>
-</div>
+</div><div class="sidebar"><h1>CAFE 80s</h1><br /><br /><br /><br /><br /><br /><br /><p>Scan onderstaande QR-code om zelf een bericht te posten!</p></div>
+</div><div class="qrcode" id="qrcode"></div>
+<script  src="static/js/qrcode.js"></script>
 <script  src="static/js/script.js"></script>
+<script type="text/javascript">
+new QRCode(document.getElementById("qrcode"), "http://" + window.location.host + "/chat");
+</script>
 </body>
 </html>

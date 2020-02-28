@@ -31,6 +31,7 @@ class HomeHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("redir.html")
 
+
 class MainHandler(tornado.web.RequestHandler):
     def data_received(self, chunk: bytes) -> Optional[Awaitable[None]]:
         pass
@@ -49,8 +50,12 @@ class MobileHandler(tornado.web.RequestHandler):
     def post(self):
         msg = self.request.body.decode('utf-8')
         print(f"Received message: {msg}")
-        self.write("Bericht ontvangen!")
-        write_to_client_ws(msg)
+        if msg is not "":
+            self.write("Bericht ontvangen!")
+            write_to_client_ws(msg)
+        else:
+            self.write("Geef je bericht op in het tekstvak.")
+
 
 
 
